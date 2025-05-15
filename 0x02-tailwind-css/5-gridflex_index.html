@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid and Flexbox Layout</title>
+    <!-- Including Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom media query for responsive layout on mobile devices -->
     <style>
         @media (max-width: 768px) {
             main {
@@ -14,18 +17,25 @@
     </style>
 </head>
 <body class="p-4">
+    <!-- Header section with blue background -->
     <header class="bg-blue-500 text-white p-4">
         <h1 class="text-3xl">Grid and Flexbox Layout</h1>
     </header>
 
+    <!-- Main content area using CSS Grid -->
+    <!-- Grid layout: 1 column on mobile, 3 columns on large screens -->
     <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+        <!-- Main content section spanning 2 columns on large screens -->
+        <!-- Using flexbox for internal layout -->
         <section class="lg:col-span-2 flex">
             <div class="p-4 bg-red-200 w-1/2">Flexbox Item 1</div>
             <div class="p-4 bg-red-400 w-1/2">Flexbox Item 2</div>
         </section>
+        <!-- Sidebar section taking up 1 column -->
         <aside class="bg-green-200 p-4">Sidebar</aside>
     </main>
 
+    <!-- Footer section with dark background -->
     <footer class="bg-gray-800 text-white p-4 mt-4">
         <p>&copy; 2024 John Doe's Blog</p>
     </footer>

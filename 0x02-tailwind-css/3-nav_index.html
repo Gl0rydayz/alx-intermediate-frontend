@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox Navigation Bar</title>
+    <!-- Link to Tailwind CSS compiled stylesheet -->
     <link href="./src/output.css" rel="stylesheet">
     <style>
+        /* Media query for responsive navigation on mobile devices */
         @media (max-width: 768px) {
             nav {
+                /* Stack navigation items vertically on small screens */
                 flex-direction: column;
                 align-items: flex-start;
             }
@@ -15,11 +19,14 @@
     </style>
 </head>
 <body class="p-4">
+    <!-- Header section with page title -->
     <header class="mb-4">
         <h1 class="text-3xl font-bold">Flexbox Navigation Bar</h1>
     </header>
 
+    <!-- Navigation bar using Flexbox -->
     <nav class="flex space-x-5 justify-center bg-gray-300 text-white p-4">
+        <!-- Navigation links with hover effects and padding -->
         <a href="#" class="px-2 text-xl hover:bg-gray-500 p-2 rounded-lg">Home</a>
         <a href="#" class="px-2 text-xl hover:bg-gray-500 p-2 rounded-lg">About</a>
         <a href="#" class="px-2 text-xl hover:bg-gray-500 p-2 rounded-lg">Services</a>

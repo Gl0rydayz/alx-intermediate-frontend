@@ -1,4 +1,6 @@
+/* Base CSS reset and default styles */
 *, ::before, ::after {
+  /* CSS custom properties (variables) for various transformations and effects */
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -105,6 +107,139 @@
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
+
+/* Tailwind CSS v3.4.17 - Core styles and utilities */
+/* 
+  Base styles that ensure consistent rendering across browsers
+  and provide a solid foundation for Tailwind's utility classes
+*/
+
+/* Box model and border defaults */
+*,
+::before,
+::after {
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+/* Default content for pseudo-elements */
+::before,
+::after {
+  --tw-content: '';
+}
+
+/* Base HTML and body styles */
+html,
+:host {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Prevents font size adjustment on iOS */
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent; /* Removes tap highlight on iOS */
+}
+
+/* Reset body margins and inherit line height */
+body {
+  margin: 0;
+  line-height: inherit;
+}
+
+/* Horizontal rule styles */
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Link styles */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* Form element styles */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; /* Single column layout on mobile devices */
+  }
+}
+
+/* Grid layout utilities */
+.grid {
+  display: grid;
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3-column grid layout */
+}
+.gap-4 {
+  gap: 1rem; /* Spacing between grid items */
+}
+
+/* Background color utilities */
+.bg-blue-200 { background-color: rgb(191 219 254); }
+.bg-blue-300 { background-color: rgb(147 197 253); }
+.bg-blue-400 { background-color: rgb(96 165 250); }
+.bg-blue-500 { background-color: rgb(59 130 246); }
+.bg-red-200 { background-color: rgb(254 202 202); }
+.bg-red-400 { background-color: rgb(248 113 113); }
+.bg-red-500 { background-color: rgb(239 68 68); }
+.bg-green-200 { background-color: rgb(187 247 208); }
+.bg-yellow-200 { background-color: rgb(254 240 138); }
+
+/* Layout utilities */
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } /* 2-column grid layout */
+.gap-2 { gap: 0.5rem; } /* Smaller gap between grid items */
+.p-4 { padding: 1rem; } /* Large padding */
+.p-2 { padding: 0.5rem; } /* Small padding */
+
+/* Flexbox utilities */
+.flex { display: flex; }
+.space-x-5 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.25rem; } /* Horizontal spacing between flex items */
+.justify-center { justify-content: center; } /* Center flex items horizontally */
+
+/* Text and typography utilities */
+.text-white { color: rgb(255 255 255); }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.font-bold { font-weight: 700; }
+
+/* Interactive states */
+.hover\:bg-gray-500:hover { background-color: rgb(107 114 128); } /* Hover effect for gray background */
+
+/* Spacing and layout */
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; } /* Horizontal padding */
+.mb-4 { margin-bottom: 1rem; } /* Bottom margin */
+.rounded-lg { border-radius: 0.5rem; } /* Rounded corners */
 
 /*
 ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com

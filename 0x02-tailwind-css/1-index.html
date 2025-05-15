@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic CSS Grid Layout</title>
+    <!-- Link to the compiled Tailwind CSS file -->
     <link href="./src/output.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Header section containing the main title -->
     <header>
         <h1>Basic CSS Grid Layout</h1>
     </header>
 
+    <!-- Main content area using Tailwind's grid system -->
+    <!-- grid-cols-3 creates a 3-column layout -->
+    <!-- gap-4 adds spacing between grid items -->
     <main class="grid grid-cols-3 gap-4">
+        <!-- Three columns with different background colors and padding -->
         <div class="bg-blue-200 p-4">Column 1</div>
         <div class="bg-blue-300 p-4">Column 2</div>
         <div class="bg-blue-400 p-4">Column 3</div>
